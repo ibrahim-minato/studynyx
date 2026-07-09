@@ -5,7 +5,7 @@ import api from "../../api";
 const LETTERS = ["A", "B", "C", "D"];
 
 export default function Quiz() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(() => { const p = sessionStorage.getItem("sn_prefill_text"); if (p) { sessionStorage.removeItem("sn_prefill_text"); return p; } return ""; });
   const [title, setTitle] = useState("");
   const [count, setCount] = useState(5);
   const [quiz, setQuiz] = useState(null);

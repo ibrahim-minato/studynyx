@@ -9,6 +9,7 @@ import Documents from "../components/dashboard/Documents";
 import Progress from "../components/dashboard/Progress";
 import StudyPlan from "../components/dashboard/StudyPlan";
 import Settings from "../components/dashboard/Settings";
+import Transcription from "../components/dashboard/Transcription";
 
 const titles = {
   "/dashboard": "Overview",
@@ -18,6 +19,7 @@ const titles = {
   "/dashboard/tutor": "AI Tutor",
   "/dashboard/plan": "Study Plan",
   "/dashboard/progress": "Progress",
+  "/dashboard/transcription": "Transcription",
   "/dashboard/settings": "Settings",
 };
 
@@ -29,6 +31,7 @@ const activeId = {
   "/dashboard/tutor": "tutor",
   "/dashboard/plan": "plan",
   "/dashboard/progress": "progress",
+  "/dashboard/transcription": "transcription",
   "/dashboard/settings": "settings",
 };
 
@@ -51,6 +54,7 @@ export default function Dashboard() {
             <Route path="tutor" element={<Tutor />} />
             <Route path="plan" element={<StudyPlan />} />
             <Route path="progress" element={<Progress />} />
+            <Route path="transcription" element={<Transcription />} />
             <Route path="settings" element={<Settings />} />
           </Routes>
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BookOpen, Home, FileText, Brain, HelpCircle, MessageSquare, TrendingUp, Settings, LogOut, Calendar, X, Menu, Zap, Check } from "lucide-react";
+import { BookOpen, Home, FileText, Brain, HelpCircle, MessageSquare, TrendingUp, Settings, LogOut, Calendar, X, Menu, Zap, Check, Mic } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
   { id: "tutor", path: "/dashboard/tutor", icon: <MessageSquare size={16} />, label: "AI Tutor" },
   { id: "plan", path: "/dashboard/plan", icon: <Calendar size={16} />, label: "Study Plan" },
   { id: "progress", path: "/dashboard/progress", icon: <TrendingUp size={16} />, label: "Progress" },
+  { id: "transcription", path: "/dashboard/transcription", icon: <Mic size={16} />, label: "Transcription" },
 ];
 
 const plans = [

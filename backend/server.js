@@ -41,3 +41,4 @@ mongoose
 // ── Start ──
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 StudyNyx API running on port ${PORT}`));
+// already required above — just add the route

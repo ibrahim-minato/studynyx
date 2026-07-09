@@ -3,7 +3,7 @@ import { Brain, ChevronLeft, ChevronRight, RotateCcw, Sparkles, FileText } from 
 import api from "../../api";
 
 export default function Flashcards() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(() => { const p = sessionStorage.getItem("sn_prefill_text"); if (p) { sessionStorage.removeItem("sn_prefill_text"); return p; } return ""; });
   const [title, setTitle] = useState("");
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);

@@ -55,9 +55,11 @@ export default function Login() {
               {showPw ? <EyeOff size={15} /> : <Eye size={15} />}
             </button>
           </div>
+
           <div style={{ textAlign: "right", margin: "10px 0 20px" }}>
-            <a href="#" style={{ fontSize: 12, color: "#A78BFA" }}>Forgot password?</a>
+            <Link to="/forgot-password" style={{ fontSize: 12, color: "#A78BFA", textDecoration: "none" }}>Forgot password?</Link>
           </div>
+
           <button type="submit" className="btn btn-pr btn-full" disabled={loading}>
             {loading ? <div className="spinner" style={{ width: 16, height: 16 }} /> : "Sign in"}
           </button>
